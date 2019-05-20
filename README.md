@@ -1,6 +1,6 @@
 ## Instalação 
 
-Primeiro de tudo instale o docker and docker-compose.
+Primeiro de tudo instale o docker e docker-compose.
 
 Depois disso, siga os passos:
 
@@ -28,3 +28,5 @@ Projeto pode ser acessado em http://localhost/api/shoes
   - Remove um registro específico do recurso.
 - GET http://localhost/shoes/list
   - Identidade visual com os dados cadastrados no recurso.
+- POST http://localhost/api/csv_import
+  - Importa o arquivo enviado e redireciona para o recurso de lista
