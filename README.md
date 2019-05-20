@@ -7,7 +7,10 @@ Depois disso, siga os passos:
 1. docker-compose up -d
 2. docker exec -ti app bash
 3. composer install
-4. php artisan migrate
+4. cp .env.example .env
+5. php artisan config:clear
+6. php artisan migrate:install
+7. php artisan migrate
 
 Projeto pode ser acessado em http://localhost/api/shoes
 
