@@ -4,9 +4,12 @@ namespace Tests\Unit;
 
 use Mockery;
 use Tests\TestCase;
+use Tests\CreatesApplication;
 
 class UnitTestCase extends TestCase
 {
+    use CreatesApplication;
+
     /**
      * @var array
      */
@@ -32,7 +35,7 @@ class UnitTestCase extends TestCase
      */
     protected $mocks;
 
-    public function tearDown()
+    public function tearDown() : void
     {
         Mockery::close();
 
@@ -42,7 +45,7 @@ class UnitTestCase extends TestCase
         $this->testedClass = null;
     }
 
-    public function mock($class)
+    public function mockClass($class)
     {
         $mock = Mockery::mock($class);
         $this->app->instance($class, $mock);
@@ -50,8 +53,10 @@ class UnitTestCase extends TestCase
         return $mock;
     }
 
-    public function setUp()
+    public function setUp() : void
     {
-        $this->reflection = new ReflectionClass($this->testedClass);
+        $this->app = $this->createApplication();
+
+        parent::setUp();
     }
 }
