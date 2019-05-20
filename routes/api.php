@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::resource('shoes', '\\'.\Api\Http\Controllers\ShoeController::class);
+Route::post('/shoes/csv_import', '\\'.\Api\Http\Controllers\ShoeController::class . '@importFile')->name('shoes.importFile');

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Api\Services\ShoeService;
 use Api\Http\Requests\CsvImportRequest;
+use Illuminate\Http\UploadedFile;
 
 class ShoeController extends Controller
 {
@@ -66,6 +67,18 @@ class ShoeController extends Controller
     public function destroy($id)
     {
         $this->service->destroy($id);
+    }
+
+    /**
+     *
+     * @param \Illuminate\Http\UploadedFile $uploadedFile
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function importFile(UploadedFile $uploadedFile)
+    {
+        $this->service->processImport($uploadedFile);
+
+        return redirect()->route('list');
     }
 
     /**
