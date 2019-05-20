@@ -14,14 +14,14 @@ Projeto pode ser acessado em http://localhost/api/shoes
 ## APIs
 
 - GET http://localhost/api/shoes
-  Lista de todos os dados cadastrados no recurso.
+  - Lista de todos os dados cadastrados no recurso.
 - GET http://localhost/shoes/{ID} 
-  Lista um específico registro do recurso.
+  - Lista um específico registro do recurso.
 - POST http://localhost/api/shoes
-  Cadastra um registro específico no recurso. Os dados expostsos para o recurso são `brand`, `color` e `size`, sendo todos texto.
+  - Cadastra um registro específico no recurso. Os dados expostsos para o recurso são `brand`, `color` e `size`, sendo todos texto.
 - PUT http://localhost/api/shoes/{ID}
-  Atualiza um registro específico no recurso. Os dados expostsos para o recurso são `brand`, `color` e `size`, sendo todos texto.
+  - Atualiza um registro específico no recurso. Os dados expostsos para o recurso são `brand`, `color` e `size`, sendo todos texto.
 - DELETE http://localhost/api/shoes/{ID}
-  Remove um registro específico do recurso.
+  - Remove um registro específico do recurso.
 - GET http://localhost/shoes/list
-  Identidade visual com os dados cadastrados no recurso.
+  - Identidade visual com os dados cadastrados no recurso.
